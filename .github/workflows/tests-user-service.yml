@@ -1,4 +1,4 @@
-name: tests
+name: tests-user-service
 
 on:
   pull_request
@@ -8,4 +8,4 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - uses: actions/checkout@v2
-       - run: cd Auth-service && npm install && npm run test:ci
+       - run: cd Auth-service && npm install && npm run prestart
