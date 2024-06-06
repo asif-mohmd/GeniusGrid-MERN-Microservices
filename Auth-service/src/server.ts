@@ -34,6 +34,7 @@ const grpcServer = () => {
   );
 };
 
+
 server.addService((authProto.AuthService as any).service, {
   AuthToken: controller.isAuthenticated
 });
