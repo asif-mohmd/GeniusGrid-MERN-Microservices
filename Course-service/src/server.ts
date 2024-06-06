@@ -31,6 +31,7 @@ const controller = new CourseController(interactor)
 
 const server = new grpc.Server()
 
+console.log("test")
 
 
 const grpcServer = () =>{
@@ -52,8 +53,6 @@ const grpcServer = () =>{
         ListCourse : controller.onListCourse.bind(controller),
         // GetCourseDetails : controller.onGetCourseDetails.bind(controller),
         // AddLessonContent : controller.onAddLessonsContent.bind(controller)
-        
-        // Implementation of service methods
     });
 
 grpcServer();
