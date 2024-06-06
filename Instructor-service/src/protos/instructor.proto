@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+
+service InstructorService{
+    rpc Register (RegisterRequest) returns (RegisterResponse) {};
+    rpc Login (LoginRequest) returns (LoginResponse) {};
+    rpc ActivateInstructor (ActivateRequest) returns (ActivateResponse) {};
+    rpc GetAllInstructors (GetAllInstructorsRequest) returns (GetAllInstructorsResponse) {};
+    rpc InstructorBlockUnblock (BlockUnblockRequest) returns (BlockUnblockResponse) {}
+    rpc Profile (ProflePageRequest) returns (ProfilePageResponse) {};
+}
+
+message ProflePageRequest{
+    string instructorId = 1;
+}
+
+message ProfilePageResponse{
+    string name = 1;
+    string email = 2;
+}
+
+message BlockUnblockRequest{
+    string id = 1;
+    bool isVerified = 2;
+}
+
+message BlockUnblockResponse{
+    bool instructorStatus = 1;
+}
+
+message RegisterRequest{
+    string name=1;
+    string email=2;
+    string password=3;
+
+}
+
+
+message RegisterResponse {
+    string msg = 1;
+    bool registerStatus = 2;
+    Token instructorData = 3;
+  
+}
+
+message LoginRequest{
+    string email = 1;
+    string password = 2;
+}
+
+message LoginResponse{
+    string msg = 1;
+    int32 status = 2;
+    string activationToken = 3;
+    bool loginStatus = 4;
+}
+
+message Token {
+    string token = 1;
+}
+
+message ActivateRequest{
+    string name = 1;
+    string email = 2;
+    string password = 3;
+}
+
+message ActivateResponse{
+    bool status = 1;
+}
+
+message GetAllInstructorsRequest {
+    
+}
+
+message GetAllInstructorsResponse {
+    repeated GetInstructors instructors = 1;
+}
+
+message GetInstructors {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    bool isVerified = 4;
+    repeated string courses = 5;
+    
+}

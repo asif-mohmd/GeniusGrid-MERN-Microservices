@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+service AuthService {
+    rpc AuthToken (TokenRequest) returns (TokenResponse) {};
+}
+
+message TokenRequest {
+    string token = 1;
+}
+
+message TokenResponse {
+    bool status = 1;
+}
