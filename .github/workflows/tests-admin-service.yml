@@ -1,7 +1,9 @@
 name: tests-admin-service
 
 on:
-  pull_request
+  pull_request:
+     paths:
+       - 'admin/**'
 
 jobs:
   build:

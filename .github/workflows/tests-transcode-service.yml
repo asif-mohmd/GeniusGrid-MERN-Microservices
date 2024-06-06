@@ -1,8 +1,9 @@
 name: tests-transcode-service
 
 on:
-  pull_request
-
+  pull_request:
+     paths:
+       - 'transcode/**'
 jobs:
   build:
      runs-on: ubuntu-latest

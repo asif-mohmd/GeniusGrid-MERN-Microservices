@@ -1,7 +1,9 @@
 name: tests-order-service
 
 on:
-  pull_request
+  pull_request:
+     paths:
+       - 'order/**'
 
 jobs:
   build:

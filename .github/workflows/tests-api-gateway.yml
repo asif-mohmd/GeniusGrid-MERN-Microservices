@@ -1,7 +1,9 @@
 name: tests-api-gateway
 
 on:
-  pull_request
+  pull_request:
+     paths:
+       - 'api-gateway/**'
 
 jobs:
   build:

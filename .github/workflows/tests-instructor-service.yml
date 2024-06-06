@@ -1,7 +1,9 @@
 name: tests-instructor-service
 
 on:
-  pull_request
+  pull_request:
+     paths:
+       - 'instructor/**'
 
 jobs:
   build:

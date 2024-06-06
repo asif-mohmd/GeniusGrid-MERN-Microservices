@@ -1,21 +1,21 @@
 export default{
-    home:'/',
-    login: '/login',
-    register: '/register',
-    otp: '/otp',
-    forgotPassword: '/forgotpassword',
-    forgotOTP: '/forgototp',
-    courseDetails: "/course-details/:courseId",
-    purchasedCoures : "/purchased/course/:_id",
-    userDetails : "/user/details",
-    checkout : "/order/checkout/session",
-    makePayment : "/order/checkout/session",
-    checkoutSuccess : "/payment/success",
-    profilePage : "/profile/page",
-    createUserOrder : "/create/user/order",
-    uploadAvatar: "/upload/avatar",
-    aboutUs: "/about/us",
-    errorPage: "/error"
+    home:'/api/',
+    login: '/api/login',
+    register: '/api/register',
+    otp: '/api/otp',
+    forgotPassword: '/api/forgotpassword',
+    forgotOTP: '/api/forgototp',
+    courseDetails: "/api/course-details/:courseId",
+    purchasedCoures : "/api/purchased/course/:_id",
+    userDetails : "/api/user/details",
+    checkout : "/api/order/checkout/session",
+    makePayment : "/api/order/checkout/session",
+    checkoutSuccess : "/api/payment/success",
+    profilePage : "/api/profile/page",
+    createUserOrder : "/api/create/user/order",
+    uploadAvatar: "/api/upload/avatar",
+    aboutUs: "/api/about/us",
+    errorPage: "/api/error"
     
     
 }

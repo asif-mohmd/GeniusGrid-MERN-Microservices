@@ -30,7 +30,7 @@ app.use(cors({
 app.use(cookieParser());
 app.use(express.json({ limit: "50mb" }));
 
-app.use("/", userRouter);
+app.use("/api/", userRouter);
 app.use("/admin", adminRoute);
 app.use("/instructor", instructorRoute);
 app.use("/course", courseRoute);

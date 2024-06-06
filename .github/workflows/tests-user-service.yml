@@ -1,7 +1,9 @@
 name: tests-user-service
 
 on:
-  pull_request
+  pull_request:
+     paths:
+       - 'user/**'
 
 jobs:
   build:
