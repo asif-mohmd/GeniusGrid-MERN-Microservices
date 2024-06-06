@@ -14,7 +14,7 @@ const packageDefinition = protoLoader.loadSync(
 
 const authProto = grpc.loadPackageDefinition(packageDefinition);
 
-
+console.log("starting Up.......")
 
 const controller = new AuthController();
 
@@ -33,6 +33,7 @@ const grpcServer = () => {
     }
   );
 };
+
 
 server.addService((authProto.AuthService as any).service, {
   AuthToken: controller.isAuthenticated
