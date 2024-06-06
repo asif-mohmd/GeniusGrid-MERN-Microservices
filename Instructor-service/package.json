@@ -8,6 +8,7 @@
     "prestart": "npm run build",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts"
+    
   },
   "author": "",
   "license": "ISC",

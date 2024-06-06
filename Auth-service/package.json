@@ -7,8 +7,8 @@
     "build": "npx tsc && npx copyfiles -u 1 \"src/protos/**/*\" dist",
     "prestart": "npm run build",
     "start": "node dist/server.js",
-    "dev": "nodemon src/server.ts",
-    "test:ci": "npm run build"
+    "dev": "nodemon src/server.ts"
+  
   },
   
   "author": "",
