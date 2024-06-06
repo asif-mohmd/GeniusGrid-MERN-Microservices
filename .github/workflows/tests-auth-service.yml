@@ -1,0 +1,13 @@
+name: tests-auth-service
+
+on:
+  pull_request:
+     paths:
+       - 'auth/**'
+
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - run: cd Auth-service && npm install && npm run prestart
