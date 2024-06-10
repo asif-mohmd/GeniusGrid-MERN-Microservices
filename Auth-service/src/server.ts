@@ -14,7 +14,7 @@ const packageDefinition = protoLoader.loadSync(
 
 const authProto = grpc.loadPackageDefinition(packageDefinition);
 
-console.log("starting Up...................")
+console.log("starting Up")
 
 const controller = new AuthController();
 
